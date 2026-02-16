@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Antropometria Profissional | Aprenda com Didática Prática e Alta Qualidade</title>
+    <meta name="description" content="Curso completo de antropometria para nutricionistas e profissionais de educação física. Didática prática, anatomia palpatória, gravações em alta qualidade. Transforme sua avaliação corporal.">
+    <meta name="keywords" content="curso de antropometria, avaliação corporal, nutricionista, educação física, anatomia palpatória, percentual de gordura, bioimpedância, dobras cutâneas">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Curso de Antropometria Profissional | Didática Prática de Alto Nível">
+    <meta property="og:description" content="O único curso de antropometria com didática aplicável e gravações em alta qualidade. Para nutricionistas e profissionais de educação física.">
+    <meta property="og:type" content="product">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #059669;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        /* Header */
+        .top-bar {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .top-bar span {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, #334155 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero h1 span {
+            color: var(--accent);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .hero-feature::before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
+            color: var(--dark);
+            padding: 1.25rem 3rem;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+        
+        .guarantee {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.125rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .problem-card {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .problem-card h3 {
+            color: #dc2626;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .problem-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .solution-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .solution-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .solution-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Differentiators */
+        .differentiators {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .diff-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .diff-number {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+        }
+        
+        .diff-label {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-top: 0.5rem;
+        }
+        
+        .diff-desc {
+            color: var(--gray);
+            margin-top: 0.5rem;
+        }
+        
+        /* Content Section */
+        .content {
+            padding: 4rem 2rem;
+            background: var(--light);
+        }
+        
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .module {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+            transition: border-color 0.3s;
+        }
+        
+        .module:hover {
+            border-color: var(--primary);
+        }
+        
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .module-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        
+        .module h3 {
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+        
+        .module ul {
+            list-style: none;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .module li {
+            padding: 0.25rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .module li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        /* Target Audience */
+        .audience {
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+        
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .audience-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .audience-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .audience-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .audience-card p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: """;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.3;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .testimonial-role {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .pricing-box {
+            background: white;
+            color: var(--dark);
+            max-width: 500px;
+            margin: 3rem auto 0;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .price-label {
+            font-size: 1rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin: 1rem 0;
+        }
+        
+        .price-installment {
+            color: var(--gray);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .price-features {
+            text-align: left;
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .price-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .price-features li::before {
+            content: "✓";
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        .cta-button-large {
+            display: block;
+            background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
+            color: var(--dark);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button-large:hover {
+            transform: scale(1.05);
+        }
+        
+        .secure-badge {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 4rem 2rem;
+            background: var(--light);
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--gray);
+        }
+        
+        /* Footer CTA */
+        .footer-cta {
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+            text-align: center;
+        }
+        
+        .footer-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-cta p {
+            color: #94a3b8;
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #64748b;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .price {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        🎉 <span>Lançamento Especial:</span> 30% de desconto por tempo limitado + Bônus exclusivos
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">Curso Completo de Antropometria</div>
+        <h1>Domine a <span>Avaliação Corporal</span> com Didática Prática e Alta Qualidade</h1>
+        <p class="hero-subtitle">O único curso do mercado com gravações profissionais em 4K, anatomia palpatória detalhada e metodologia 100% aplicável para nutricionistas e profissionais de educação física.</p>
+        
+        <div class="hero-features">
+            <div class="hero-feature">Acesso Vitalício</div>
+            <div class="hero-feature">Certificado Reconhecido</div>
+            <div class="hero-feature">Suporte Direto</div>
+            <div class="hero-feature">Garantia de 7 Dias</div>
+        </div>
+        
+        <a href="https://pay.hotmart.com/SEU_LINK_AQUI" class="cta-button">Quero Me Matricular Agora →</a>
+        <p class="guarantee">🔒 Pagamento 100% seguro • Acesso imediato</p>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">Você se identifica com alguma dessas situações?</h2>
+            <p class="section-subtitle">Muitos profissionais enfrentam desafios ao realizar avaliações corporais. Você não está sozinho.</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>😰 Insegurança na prática</h3>
+                    <p>Você tem medo de errar as medições na frente do paciente ou aluno porque não teve uma formação prática adequada?</p>
+                </div>
+                <div class="problem-card">
+                    <h3>📹 Cursos com qualidade ruim</h3>
+                    <p>Já comprou cursos onde não conseguia ver direito os pontos de medição por causa da qualidade de imagem?</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🤔 Dificuldade de aplicar</h3>
+                    <p>Teoria demais, prática de menos? Sente que os cursos não preparam para o dia a dia profissional?</p>
+                </div>
+                <div class="problem-card">
+                    <h3>📊 Resultados inconsistentes</h3>
+                    <p>Suas medições variam muito entre uma avaliação e outra porque não domina a técnica correta?</p>
+                </div>
+                <div class="problem-card">
+                    <h3>💸 Perdendo clientes</h3>
+                    <p>Está perdendo oportunidades porque não oferece avaliação corporal completa e profissional?</p>
+                </div>
+                <div class="problem-card">
+                    <h3>⏰ Falta de tempo</h3>
+                    <p>Precisa de um método rápido e eficiente que não tome horas da sua consulta ou treino?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-title">Apresentamos a solução definitiva</h2>
+            <p class="section-subtitle">Um curso desenvolvido por profissionais que entendem as dores do dia a dia e criaram a metodologia perfeita.</p>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">🎥</div>
+                    <h3>Gravações em Alta Qualidade</h3>
+                    <p>Vídeos em 4K com múltiplos ângulos de câmera, iluminação profissional e zoom nos pontos de medição. Você enxerga cada detalhe como se estivesse ao lado do professor.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">👐</div>
+                    <h3>Anatomia Palpatória Detalhada</h3>
+                    <p>Aprenda a localizar com precisão cada ponto anatômico. Técnicas de palpação ensinadas passo a passo para medições precisas e reproduzíveis.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">⚡</div>
+                    <h3>Didática 100% Prática</h3>
+                    <p>Zero enrolação. Cada aula é focada em você sair aplicando imediatamente. Exercícios práticos, casos reais e protocolos validados.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📚</div>
+                    <h3>Material Complementar Completo</h3>
+                    <p>Planilhas de acompanhamento, protocolos de avaliação, fichas prontas para impressão e guias de consulta rápida.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🎯</div>
+                    <h3>Expertise de Quem Faz</h3>
+                    <p>Instrutores com anos de experiência prática clínica. Aprenda os macetes e atalhos que só quem trabalha no dia a dia conhece.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">💬</div>
+                    <h3>Suporte e Comunidade</h3>
+                    <p>Tire dúvidas diretamente com os instrutores. Acesso a grupo exclusivo de alunos para networking e troca de experiências.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Differentiators -->
+    <section class="differentiators">
+        <div class="container">
+            <h2 class="section-title">Números que comprovam a excelência</h2>
+            <p class="section-subtitle">Investimos no que realmente importa para sua formação profissional.</p>
+            
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <div class="diff-number">4K</div>
+                    <div class="diff-label">Qualidade de Vídeo</div>
+                    <div class="diff-desc">Gravações em ultra alta definição</div>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-number">50+</div>
+                    <div class="diff-label">Horas de Conteúdo</div>
+                    <div class="diff-desc">Aulas teóricas e práticas</div>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-number">12</div>
+                    <div class="diff-label">Módulos Completos</div>
+                    <div class="diff-desc">Do básico ao avançado</div>
+                </div>
+                <div class="diff-card">
+                    <div class="diff-number">∞</div>
+                    <div class="diff-label">Acesso Vitalício</div>
+                    <div class="diff-desc">Assista quando quiser</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2 class="section-title">O que você vai aprender no curso</h2>
+            <p class="section-subtitle">Conteúdo completo e estruturado para tornar você um expert em avaliação corporal.</p>
+            
+            <div class="modules">
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">1</div>
+                        <h3>Fundamentos da Antropometria</h3>
+                    </div>
+                    <ul>
+                        <li>História e princípios científicos</li>
+                        <li>Normas técnicas e éticas</li>
+                        <li>Equipamentos e materiais</li>
+                        <li>Preparo do avaliador e avaliado</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">2</div>
+                        <h3>Anatomia Palpatória</h3>
+                    </div>
+                    <ul>
+                        <li>Localização de pontos ósseos</li>
+                        <li>Técnicas de palpação</li>
+                        <li>Referências anatômicas</li>
+                        <li>Prática guiada passo a passo</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">3</div>
+                        <h3>Medidas de Peso e Estatura</h3>
+                    </div>
+                    <ul>
+                        <li>Técnicas corretas de medição</li>
+                        <li>Fontes de erro e como evitar</li>
+                        <li>Equipamentos e calibração</li>
+                        <li>Registro e interpretação</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">4</div>
+                        <h3>Circunferências Corporais</h3>
+                    </div>
+                    <ul>
+                        <li>Protocolos internacionais</li>
+                        <li>Pontos anatômicos de referência</li>
+                        <li>Técnica de posicionamento da fita</li>
+                        <li>Interpretação dos resultados</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">5</div>
+                        <h3>Dobras Cutâneas</h3>
+                    </div>
+                    <ul>
+                        <li>Protocolo de 3, 7 e 9 dobras</li>
+                        <li>Técnica de pinçamento</li>
+                        <li>Localização precisa dos sites</li>
+                        <li>Cálculo do percentual de gordura</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">6</div>
+                        <h3>Diametros Ósseos</h3>
+                    </div>
+                    <ul>
+                        <li>Medidas de diâmetro</li>
+                        <li>Cálculo de massa óssea</li>
+                        <li>Determinação do frame corporal</li>
+                        <li>Aplicações práticas</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">7</div>
+                        <h3>Bioimpedância Elétrica</h3>
+                    </div>
+                    <ul>
+                        <li>Princípios físicos</li>
+                        <li>Protocolos de medição</li>
+                        <li>Interpretação de resultados</li>
+                        <li>Limitações e cuidados</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">8</div>
+                        <h3>Composição Corporal</h3>
+                    </div>
+                    <ul>
+                        <li>Modelos de 2, 3 e 4 compartimentos</li>
+                        <li>Equações preditivas</li>
+                        <li>Softwares de análise</li>
+                        <li>Relatórios profissionais</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">9</div>
+                        <h3>Perimetria e Índices</h3>
+                    </div>
+                    <ul>
+                        <li>Índice cintura-quadril</li>
+                        <li>Índice de conicidade</li>
+                        <li>Relação cintura-estatura</li>
+                        <li>Interpretação clínica</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">10</div>
+                        <h3>Avaliação Postural</h3>
+                    </div>
+                    <ul>
+                        <li>Protocolos de avaliação</li>
+                        <li>Fotometria postural</li>
+                        <li>Softwares de análise</li>
+                        <li>Relatório postural</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">11</div>
+                        <h3>Casos Práticos</h3>
+                    </div>
+                    <ul>
+                        <li>Avaliação completa em adultos</li>
+                        <li>Avaliação em idosos</li>
+                        <li>Avaliação em atletas</li>
+                        <li>Avaliação em obesidade</li>
+                    </ul>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <div class="module-number">12</div>
+                        <h3>Consultório na Prática</h3>
+                    </div>
+                    <ul>
+                        <li>Montagem do espaço</li>
+                        <li>Fluxo de atendimento</li>
+                        <li>Precificação</li>
+                        <li>Marketing para avaliação</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Target Audience -->
+    <section class="audience">
+        <div class="container">
+            <h2 class="section-title">Para quem é este curso?</h2>
+            <p class="section-subtitle">Profissionais e estudantes que querem se destacar na avaliação corporal.</p>
+            
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <div class="audience-icon">🥗</div>
+                    <h3>Nutricionistas</h3>
+                    <p>Aprimore suas consultas com avaliações corporais precisas e completas. Diferencie-se no mercado.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">💪</div>
+                    <h3>Profissionais de Educação Física</h3>
+                    <p>Ofereça avaliações profissionais aos seus alunos. Aumente o valor do seu serviço.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">🎓</div>
+                    <h3>Estudantes</h3>
+                    <p>Comece sua carreira com o pé direito. Aprenda da forma correta desde o início.</p>
+                </div>
+                <div class="audience-card">
+                    <div class="audience-icon">🏥</div>
+                    <h3>Fisioterapeutas</h3>
+                    <p>Complemente sua avaliação com medidas antropométricas precisas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O que dizem nossos alunos</h2>
+            <p class="section-subtitle">Profissionais que transformaram sua prática com nosso curso.</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">Finalmente um curso onde consigo ver direito os pontos de medição! A qualidade das gravações é impressionante. Já estou aplicando tudo na minha clínica.</p>
+                    <div class="testimonial-author">Ana Carolina Silva</div>
+                    <div class="testimonial-role">Nutricionista - São Paulo</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">A didática prática faz toda a diferença. Em poucas semanas já me senti confiante para avaliar meus alunos. Melhor investimento da minha carreira.</p>
+                    <div class="testimonial-author">Ricardo Mendes</div>
+                    <div class="testimonial-role">Personal Trainer - Rio de Janeiro</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">Já fiz outros cursos de antropometria, mas nenhum com essa qualidade. A anatomia palpatória ensinada passo a passo é um diferencial enorme.</p>
+                    <div class="testimonial-author">Mariana Costa</div>
+                    <div class="testimonial-role">Estudante de Nutrição - Belo Horizonte</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Invista na sua carreira hoje</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Acesso vitalício com todas as atualizações futuras inclusas.</p>
+            
+            <div class="pricing-box">
+                <div class="price-label">Investimento Único</div>
+                <div class="price">R$ 497</div>
+                <div class="price-installment">ou 12x de R$ 49,70 no cartão</div>
+                
+                <ul class="price-features">
+                    <li>Acesso vitalício ao curso completo</li>
+                    <li>50+ horas de conteúdo em 4K</li>
+                    <li>Material complementar para download</li>
+                    <li>Certificado de conclusão</li>
+                    <li>Acesso ao grupo de alunos</li>
+                    <li>Suporte com os instrutores</li>
+                    <li>Atualizações futuras gratuitas</li>
+                    <li>Bônus: Planilhas profissionais</li>
+                </ul>
+                
+                <a href="https://pay.hotmart.com/SEU_LINK_AQUI" class="cta-button-large">Quero Garantir Minha Vaga →</a>
+                <p class="secure-badge">🔒 Pagamento 100% seguro via Hotmart</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Por quanto tempo tenho acesso ao curso? →</div>
+                    <div class="faq-answer">Acesso vitalício! Você pode assistir quantas vezes quiser, quando quiser, para sempre. Inclui todas as atualizações futuras do conteúdo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Preciso de equipamentos específicos para o curso? →</div>
+                    <div class="faq-answer">Não! O curso ensina técnicas que podem ser aplicadas com equipamentos básicos. Também indicamos fornecedores confiáveis caso queira adquirir materiais profissionais.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">O certificado é válido? →</div>
+                    <div class="faq-answer">Sim! Emitimos certificado de 50 horas válido em todo o território nacional, respeitando a carga horária mínima exigida por conselhos profissionais.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">E se eu não gostar do curso? →</div>
+                    <div class="faq-answer">Você tem 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Sou estudante, posso fazer o curso? →</div>
+                    <div class="faq-answer">Com certeza! Muitos alunos começam durante a graduação para se destacarem no mercado de trabalho. O certificado vale para complementação de horas.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="container">
+            <h2>Não perca mais tempo</h2>
+            <p>Comece hoje a transformar sua prática profissional com a avaliação corporal mais completa e de alta qualidade do mercado.</p>
+            <a href="https://pay.hotmart.com/SEU_LINK_AQUI" class="cta-button" style="font-size: 1.5rem; padding: 1.5rem 4rem;">Quero Me Matricular Agora →</a>
+            <p style="margin-top: 1.5rem; color: #94a3b8;">⚡ Oferta por tempo limitado • Garantia de 7 dias</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Curso de Antropometria Profissional. Todos os direitos reservados.</p>
+        <p style="margin-top: 0.5rem;">Este site não é afiliado ao Facebook, Instagram ou Google.</p>
+    </footer>
+    
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                
+                // Toggle current
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+        
+        // Initialize FAQ closed
+        document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+    </script>
+</body>
+</html>
