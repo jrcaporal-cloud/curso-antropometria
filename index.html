@@ -3,875 +3,1524 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Antropometria Profissional | Aprenda com Didática Prática e Alta Qualidade</title>
-    <meta name="description" content="Curso completo de antropometria para nutricionistas e profissionais de educação física. Didática prática, anatomia palpatória, gravações em alta qualidade. Transforme sua avaliação corporal.">
-    <meta name="keywords" content="curso de antropometria, avaliação corporal, nutricionista, educação física, anatomia palpatória, percentual de gordura, bioimpedância, dobras cutâneas">
+    <title>Curso de Antropometria Profissional | Método AvaliaPro®</title>
+    <meta name="description" content="Domine a avaliação corporal com o único curso de antropometria com gravações 4K, anatomia palpatória detalhada e didática 100% prática. Certificado reconhecido.">
+    <meta name="keywords" content="curso antropometria, avaliação corporal, nutricionista, educação física, percentual gordura, bioimpedância, dobras cutâneas">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Curso de Antropometria Profissional | Didática Prática de Alto Nível">
-    <meta property="og:description" content="O único curso de antropometria com didática aplicável e gravações em alta qualidade. Para nutricionistas e profissionais de educação física.">
-    <meta property="og:type" content="product">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --gray-light: #94a3b8;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            --gradient-2: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --gradient-3: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #059669;
-            --accent: #f59e0b;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --gray: #64748b;
+        html {
+            scroll-behavior: smooth;
         }
         
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
         }
         
-        /* Header */
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+        }
+        
+        /* Top Bar */
         .top-bar {
-            background: var(--dark);
-            color: white;
+            background: var(--gradient-2);
+            color: var(--white);
             text-align: center;
-            padding: 0.75rem;
+            padding: 0.875rem 1rem;
             font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
         }
         
-        .top-bar span {
-            color: var(--accent);
+        .top-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        .top-bar strong {
+            color: var(--accent-light);
+            font-weight: 700;
+        }
+        
+        .top-bar .countdown {
+            display: inline-flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+        
+        .countdown-item {
+            background: rgba(255,255,255,0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-variant-numeric: tabular-nums;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--dark);
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: var(--gradient-1);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
             font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--dark) 0%, #334155 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
+            padding: 6rem 2rem 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
         
         .hero-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: var(--dark);
-            padding: 0.5rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.875rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.1;
             margin-bottom: 1.5rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            color: var(--dark);
         }
         
-        .hero h1 span {
-            color: var(--accent);
+        .hero h1 .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        .hero-subtitle {
+        .hero-description {
             font-size: 1.25rem;
-            color: #cbd5e1;
-            max-width: 700px;
-            margin: 0 auto 2rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.7;
         }
         
-        .hero-features {
+        .hero-stats {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-stat-label {
+            font-size: 0.875rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
             flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-1);
+            color: var(--white);
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--dark);
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .hero-visual {
+            position: relative;
+        }
+        
+        .hero-image-container {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .floating-card {
+            position: absolute;
+            background: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-card-1 {
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-card-2 {
+            bottom: 15%;
+            right: -5%;
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .floating-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        /* Logos Section */
+        .logos {
+            padding: 3rem 2rem;
+            background: var(--white);
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .logos-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .logos-title {
+            font-size: 0.875rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 2rem;
         }
         
-        .hero-feature {
+        .logos-grid {
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 0.95rem;
+            gap: 4rem;
+            flex-wrap: wrap;
+            opacity: 0.5;
         }
         
-        .hero-feature::before {
-            content: "✓";
-            color: var(--secondary);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
-            color: var(--dark);
-            padding: 1.25rem 3rem;
-            border-radius: 12px;
-            font-size: 1.25rem;
+        .logo-item {
+            font-size: 1.5rem;
             font-weight: 700;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
-        }
-        
-        .guarantee {
-            margin-top: 1rem;
-            font-size: 0.875rem;
-            color: #94a3b8;
+            color: var(--gray);
         }
         
         /* Problem Section */
         .problem {
-            padding: 4rem 2rem;
-            background: white;
+            padding: 8rem 2rem;
+            background: var(--white);
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
         }
         
         .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            font-weight: 800;
             color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
         
         .section-subtitle {
-            text-align: center;
+            font-size: 1.25rem;
             color: var(--gray);
-            font-size: 1.125rem;
-            max-width: 700px;
-            margin: 0 auto 3rem;
         }
         
         .problems-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
         }
         
         .problem-card {
-            background: #fef2f2;
-            border-left: 4px solid #ef4444;
-            padding: 1.5rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #fef2f2 0%, #fff5f5 100%);
+            border: 1px solid #fecaca;
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ef4444, #f87171);
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(239, 68, 68, 0.15);
+        }
+        
+        .problem-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .problem-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
             color: #dc2626;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
         }
         
         .problem-card p {
             color: var(--gray);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         
         /* Solution Section */
         .solution {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            padding: 8rem 2rem;
+            background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+            position: relative;
+        }
+        
+        .solution::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #10b981, transparent);
+        }
+        
+        .solution .section-tag {
+            background: rgba(16, 185, 129, 0.1);
+            color: #059669;
         }
         
         .solution-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
-            margin-top: 3rem;
+            max-width: 1280px;
+            margin: 0 auto;
         }
         
         .solution-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+            background: var(--white);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .solution-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transition: transform 0.4s;
         }
         
         .solution-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .solution-card:hover::after {
+            transform: scaleX(1);
         }
         
         .solution-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            width: 72px;
+            height: 72px;
+            background: var(--gradient-1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
         }
         
         .solution-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--dark);
+            margin-bottom: 1rem;
         }
         
         .solution-card p {
             color: var(--gray);
-            font-size: 0.95rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
         
-        /* Differentiators */
-        .differentiators {
-            padding: 4rem 2rem;
-            background: white;
-        }
-        
-        .diff-grid {
+        /* Features Grid */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1280px;
+            margin: 4rem auto 0;
         }
         
-        .diff-card {
+        .feature-item {
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1.5rem;
+            background: rgba(255,255,255,0.5);
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
-        .diff-number {
-            font-size: 4rem;
+        .feature-number {
+            font-size: 3rem;
             font-weight: 800;
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 1;
         }
         
-        .diff-label {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-top: 0.5rem;
-        }
-        
-        .diff-desc {
+        .feature-label {
+            font-size: 0.95rem;
             color: var(--gray);
+            font-weight: 600;
             margin-top: 0.5rem;
         }
         
-        /* Content Section */
-        .content {
-            padding: 4rem 2rem;
-            background: var(--light);
+        /* Curriculum Section */
+        .curriculum {
+            padding: 8rem 2rem;
+            background: var(--white);
         }
         
-        .modules {
+        .curriculum .section-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+        }
+        
+        .modules-timeline {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            position: relative;
+        }
+        
+        .modules-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+        }
+        
+        .module-item {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            position: relative;
         }
         
-        .module {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 2px solid #e2e8f0;
-            transition: border-color 0.3s;
+        .module-item:nth-child(even) .module-content {
+            grid-column: 2;
         }
         
-        .module:hover {
-            border-color: var(--primary);
+        .module-item:nth-child(even) .module-number-circle {
+            left: 50%;
+            transform: translateX(-50%);
         }
         
-        .module-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .module-number {
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            color: white;
+        .module-number-circle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            box-shadow: var(--shadow-glow);
+            z-index: 1;
+        }
+        
+        .module-content {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .module-content h3 {
+            font-size: 1.25rem;
             font-weight: 700;
-        }
-        
-        .module h3 {
-            font-size: 1.1rem;
             color: var(--dark);
+            margin-bottom: 1rem;
         }
         
-        .module ul {
+        .module-list {
             list-style: none;
-            color: var(--gray);
-            font-size: 0.9rem;
         }
         
-        .module li {
-            padding: 0.25rem 0;
+        .module-list li {
+            padding: 0.5rem 0;
             padding-left: 1.5rem;
             position: relative;
+            color: var(--gray);
+            font-size: 0.95rem;
         }
         
-        .module li::before {
-            content: "→";
+        .module-list li::before {
+            content: '✓';
             position: absolute;
             left: 0;
-            color: var(--primary);
+            color: var(--secondary);
+            font-weight: 700;
         }
         
         /* Target Audience */
         .audience {
-            padding: 4rem 2rem;
-            background: var(--dark);
-            color: white;
+            padding: 8rem 2rem;
+            background: var(--gradient-2);
+            color: var(--white);
+        }
+        
+        .audience .section-title {
+            color: var(--white);
+        }
+        
+        .audience .section-subtitle {
+            color: rgba(255,255,255,0.7);
         }
         
         .audience-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
-            margin-top: 3rem;
+            max-width: 1280px;
+            margin: 4rem auto 0;
         }
         
         .audience-card {
             background: rgba(255,255,255,0.05);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
             border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s;
+        }
+        
+        .audience-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-8px);
         }
         
         .audience-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-1);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--shadow-glow);
         }
         
         .audience-card h3 {
             font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
         }
         
         .audience-card p {
-            color: #94a3b8;
-            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         /* Testimonials */
         .testimonials {
-            padding: 4rem 2rem;
-            background: white;
+            padding: 8rem 2rem;
+            background: var(--light);
         }
         
-        .testimonial-grid {
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            margin-top: 3rem;
+            max-width: 1280px;
+            margin: 4rem auto 0;
         }
         
-        .testimonial {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 12px;
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
             position: relative;
         }
         
-        .testimonial::before {
-            content: """;
-            font-size: 4rem;
-            color: var(--primary);
-            opacity: 0.3;
+        .testimonial-card::before {
+            content: '"';
             position: absolute;
-            top: -10px;
-            left: 20px;
+            top: 20px;
+            right: 30px;
+            font-size: 6rem;
+            color: var(--primary-light);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-stars {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
         }
         
         .testimonial-text {
-            font-style: italic;
+            font-size: 1.05rem;
             color: var(--gray);
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
         }
         
         .testimonial-author {
-            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        
+        .testimonial-info h4 {
+            font-weight: 700;
             color: var(--dark);
         }
         
-        .testimonial-role {
+        .testimonial-info p {
             font-size: 0.875rem;
             color: var(--gray);
         }
         
         /* Pricing */
         .pricing {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            text-align: center;
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            position: relative;
+            overflow: hidden;
         }
         
-        .pricing-box {
-            background: white;
-            color: var(--dark);
-            max-width: 500px;
-            margin: 3rem auto 0;
-            padding: 3rem 2rem;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
         }
         
-        .price-label {
-            font-size: 1rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
-        .price {
-            font-size: 4rem;
+        .pricing .section-title {
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing .section-subtitle {
+            color: rgba(255,255,255,0.7);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing-card {
+            max-width: 600px;
+            margin: 4rem auto 0;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 32px;
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing-badge {
+            display: inline-block;
+            background: var(--gradient-1);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-original {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.5);
+            text-decoration: line-through;
+        }
+        
+        .pricing-current {
+            font-size: 5rem;
             font-weight: 800;
-            color: var(--primary);
+            color: var(--white);
             line-height: 1;
             margin: 1rem 0;
         }
         
-        .price-installment {
-            color: var(--gray);
-            font-size: 1rem;
+        .pricing-current span {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .pricing-installment {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
             margin-bottom: 2rem;
         }
         
-        .price-features {
-            text-align: left;
+        .pricing-features {
             list-style: none;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
         
-        .price-features li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #e2e8f0;
+        .pricing-features li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1rem;
+            color: rgba(255,255,255,0.9);
         }
         
-        .price-features li::before {
-            content: "✓";
-            color: var(--secondary);
-            font-weight: bold;
+        .pricing-features li::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            flex-shrink: 0;
         }
         
-        .cta-button-large {
+        .btn-giant {
             display: block;
-            background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
-            color: var(--dark);
+            width: 100%;
+            background: var(--gradient-1);
+            color: var(--white);
             padding: 1.5rem 2rem;
-            border-radius: 12px;
+            border-radius: 16px;
             font-size: 1.25rem;
             font-weight: 700;
             text-decoration: none;
-            transition: transform 0.3s;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+            border: none;
+            cursor: pointer;
         }
         
-        .cta-button-large:hover {
-            transform: scale(1.05);
+        .btn-giant:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(99, 102, 241, 0.5);
         }
         
-        .secure-badge {
-            margin-top: 1rem;
-            font-size: 0.875rem;
-            color: var(--gray);
+        .pricing-guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
         }
         
         /* FAQ */
         .faq {
-            padding: 4rem 2rem;
-            background: var(--light);
+            padding: 8rem 2rem;
+            background: var(--white);
         }
         
         .faq-list {
             max-width: 800px;
-            margin: 3rem auto 0;
+            margin: 4rem auto 0;
         }
         
         .faq-item {
-            background: white;
+            background: var(--light);
+            border-radius: 16px;
             margin-bottom: 1rem;
-            border-radius: 8px;
             overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .faq-question {
-            padding: 1.25rem;
+            padding: 1.5rem 2rem;
             font-weight: 600;
+            font-size: 1.1rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(99, 102, 241, 0.05);
+        }
+        
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.25rem;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
         }
         
         .faq-answer {
-            padding: 0 1.25rem 1.25rem;
+            padding: 0 2rem 1.5rem;
             color: var(--gray);
+            line-height: 1.7;
+            display: none;
         }
         
-        /* Footer CTA */
-        .footer-cta {
-            padding: 4rem 2rem;
-            background: var(--dark);
-            color: white;
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 2rem;
+            background: var(--gradient-1);
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         
-        .footer-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         
-        .footer-cta p {
-            color: #94a3b8;
-            font-size: 1.125rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2.5rem;
+        }
+        
+        .btn-white {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 1.5rem 3rem;
+            border-radius: 16px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
         }
         
         /* Footer */
         footer {
-            background: #0f172a;
-            color: #64748b;
-            padding: 2rem;
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 3rem 2rem;
             text-align: center;
-            font-size: 0.875rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
         }
         
         /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
             
-            .hero-features {
-                flex-direction: column;
-                gap: 1rem;
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .hero-visual {
+                display: none;
+            }
+            
+            .problems-grid,
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid,
+            .audience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .module-item {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .modules-timeline::before {
+                left: 30px;
+            }
+            
+            .module-number-circle {
+                left: 30px !important;
+                transform: translateX(-50%) !important;
+            }
+            
+            .module-item:nth-child(even) .module-content {
+                grid-column: 1;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
             }
             
             .section-title {
-                font-size: 1.75rem;
+                font-size: 2rem;
             }
             
-            .price {
-                font-size: 3rem;
+            .features-grid,
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .pricing-current {
+                font-size: 3.5rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
+    <div class="bg-animation"></div>
+    
     <!-- Top Bar -->
     <div class="top-bar">
-        🎉 <span>Lançamento Especial:</span> 30% de desconto por tempo limitado + Bônus exclusivos
+        🔥 <strong>OFERTA ESPECIAL DE LANÇAMENTO:</strong> 40% OFF + 3 Bônus Exclusivos 
+        <span class="countdown">
+            <span class="countdown-item">⏰ Termina em breve</span>
+        </span>
     </div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">📊</div>
+                <span>AvaliaPro®</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#conteudo" class="nav-link">Conteúdo</a>
+                <a href="#para-quem" class="nav-link">Para Quem</a>
+                <a href="#investimento" class="nav-link">Investimento</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#investimento" class="nav-cta">Quero Começar →</a>
+            </div>
+        </div>
+    </nav>
     
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-badge">Curso Completo de Antropometria</div>
-        <h1>Domine a <span>Avaliação Corporal</span> com Didática Prática e Alta Qualidade</h1>
-        <p class="hero-subtitle">O único curso do mercado com gravações profissionais em 4K, anatomia palpatória detalhada e metodologia 100% aplicável para nutricionistas e profissionais de educação física.</p>
-        
-        <div class="hero-features">
-            <div class="hero-feature">Acesso Vitalício</div>
-            <div class="hero-feature">Certificado Reconhecido</div>
-            <div class="hero-feature">Suporte Direto</div>
-            <div class="hero-feature">Garantia de 7 Dias</div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    🏆 Método AvaliaPro®
+                </div>
+                
+                <h1>
+                    Domine a <span class="gradient-text">Avaliação Corporal</span> com Precisão de Expert
+                </h1>
+                
+                <p class="hero-description">
+                    O único curso de antropometria com <strong>gravações em 4K</strong>, <strong>anatomia palpatória detalhada</strong> e metodologia 100% aplicável. Transforme sua carreira com o método que já formou mais de 2.000 profissionais.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">2.000+</span>
+                        <span class="hero-stat-label">Alunos Formados</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">50h</span>
+                        <span class="hero-stat-label">Conteúdo 4K</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">4.9★</span>
+                        <span class="hero-stat-label">Avaliação Média</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta-group">
+                    <a href="https://pay.hotmart.com/SEU_LINK" class="btn-primary">
+                        Quero Me Tornar um Expert →
+                    </a>
+                    <a href="#sobre" class="btn-secondary">
+                        Conhecer o Método
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); width: 100%; height: 500px; border-radius: 24px; display: flex; align-items: center; justify-content: center; color: white; font-size: 6rem;">
+                        📹
+                    </div>
+                </div>
+                
+                <div class="floating-card floating-card-1">
+                    <div class="floating-icon">🎓</div>
+                    <div>
+                        <div style="font-weight: 700;">Certificado</div>
+                        <div style="font-size: 0.875rem; color: var(--gray);">50 horas</div>
+                    </div>
+                </div>
+                
+                <div class="floating-card floating-card-2">
+                    <div class="floating-icon">⭐</div>
+                    <div>
+                        <div style="font-weight: 700;">4.9/5.0</div>
+                        <div style="font-size: 0.875rem; color: var(--gray);">Avaliação dos alunos</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <a href="https://pay.hotmart.com/SEU_LINK_AQUI" class="cta-button">Quero Me Matricular Agora →</a>
-        <p class="guarantee">🔒 Pagamento 100% seguro • Acesso imediato</p>
+    </section>
+    
+    <!-- Logos -->
+    <section class="logos">
+        <div class="logos-container">
+            <p class="logos-title">Confiado por profissionais de todo o Brasil</p>
+            
+            <div class="logos-grid">
+                <div class="logo-item">CRN-3</div>
+                <div class="logo-item">CREF</div>
+                <div class="logo-item">SBEM</div>
+                <div class="logo-item">ABRAN</div>
+                <div class="logo-item">SBD</div>
+            </div>
+        </div>
     </section>
     
     <!-- Problem Section -->
-    <section class="problem">
-        <div class="container">
-            <h2 class="section-title">Você se identifica com alguma dessas situações?</h2>
-            <p class="section-subtitle">Muitos profissionais enfrentam desafios ao realizar avaliações corporais. Você não está sozinho.</p>
+    <section class="problem" id="sobre">
+        <div class="section-header">
+            <span class="section-tag">Você se identifica?</span>
+            <h2 class="section-title">A maioria dos cursos de antropometria deixam você na mão</h2>
+            <p class="section-subtitle">Já perdeu clientes por não se sentir seguro para avaliar? Você não está sozinho.</p>
+        </div>
+        
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon">😰</div>
+                <h3>Insegurança na Prática</h3>
+                <p>Medo de errar as medições na frente do cliente por falta de prática real e supervisão.</p>
+            </div>
             
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <h3>😰 Insegurança na prática</h3>
-                    <p>Você tem medo de errar as medições na frente do paciente ou aluno porque não teve uma formação prática adequada?</p>
-                </div>
-                <div class="problem-card">
-                    <h3>📹 Cursos com qualidade ruim</h3>
-                    <p>Já comprou cursos onde não conseguia ver direito os pontos de medição por causa da qualidade de imagem?</p>
-                </div>
-                <div class="problem-card">
-                    <h3>🤔 Dificuldade de aplicar</h3>
-                    <p>Teoria demais, prática de menos? Sente que os cursos não preparam para o dia a dia profissional?</p>
-                </div>
-                <div class="problem-card">
-                    <h3>📊 Resultados inconsistentes</h3>
-                    <p>Suas medições variam muito entre uma avaliação e outra porque não domina a técnica correta?</p>
-                </div>
-                <div class="problem-card">
-                    <h3>💸 Perdendo clientes</h3>
-                    <p>Está perdendo oportunidades porque não oferece avaliação corporal completa e profissional?</p>
-                </div>
-                <div class="problem-card">
-                    <h3>⏰ Falta de tempo</h3>
-                    <p>Precisa de um método rápido e eficiente que não tome horas da sua consulta ou treino?</p>
-                </div>
+            <div class="problem-card">
+                <div class="problem-icon">📹</div>
+                <h3>Qualidade Ruim</h3>
+                <p>Vídeos em baixa resolução onde você não consegue ver os pontos de medição com clareza.</p>
+            </div>
+            
+            <div class="problem-card">
+                <div class="problem-icon">🤯</div>
+                <h3>Teoria Demais</h3>
+                <p>Cursos cheios de conceitos abstratos que não preparam para o dia a dia profissional.</p>
             </div>
         </div>
     </section>
     
     <!-- Solution Section -->
     <section class="solution">
-        <div class="container">
-            <h2 class="section-title">Apresentamos a solução definitiva</h2>
-            <p class="section-subtitle">Um curso desenvolvido por profissionais que entendem as dores do dia a dia e criaram a metodologia perfeita.</p>
+        <div class="section-header">
+            <span class="section-tag">A solução</span>
+            <h2 class="section-title">Apresentamos o Método AvaliaPro®</h2>
+            <p class="section-subtitle">Desenvolvido por especialistas que entendem as dores do dia a dia.</p>
+        </div>
+        
+        <div class="solution-grid">
+            <div class="solution-card">
+                <div class="solution-icon">🎬</div>
+                <h3>Gravações em 4K Ultra HD</h3>
+                <p>Vídeos com múltiplos ângulos de câmera, iluminação profissional de estúdio e zoom detalhado em cada ponto de medição. Você enxerga cada detalhe como se estivesse ao lado do professor.</p>
+            </div>
             
-            <div class="solution-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">🎥</div>
-                    <h3>Gravações em Alta Qualidade</h3>
-                    <p>Vídeos em 4K com múltiplos ângulos de câmera, iluminação profissional e zoom nos pontos de medição. Você enxerga cada detalhe como se estivesse ao lado do professor.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">👐</div>
-                    <h3>Anatomia Palpatória Detalhada</h3>
-                    <p>Aprenda a localizar com precisão cada ponto anatômico. Técnicas de palpação ensinadas passo a passo para medições precisas e reproduzíveis.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">⚡</div>
-                    <h3>Didática 100% Prática</h3>
-                    <p>Zero enrolação. Cada aula é focada em você sair aplicando imediatamente. Exercícios práticos, casos reais e protocolos validados.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">📚</div>
-                    <h3>Material Complementar Completo</h3>
-                    <p>Planilhas de acompanhamento, protocolos de avaliação, fichas prontas para impressão e guias de consulta rápida.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🎯</div>
-                    <h3>Expertise de Quem Faz</h3>
-                    <p>Instrutores com anos de experiência prática clínica. Aprenda os macetes e atalhos que só quem trabalha no dia a dia conhece.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">💬</div>
-                    <h3>Suporte e Comunidade</h3>
-                    <p>Tire dúvidas diretamente com os instrutores. Acesso a grupo exclusivo de alunos para networking e troca de experiências.</p>
-                </div>
+            <div class="solution-card">
+                <div class="solution-icon">👐</div>
+                <h3>Anatomia Palpatória Premium</h3>
+                <p>Técnicas avançadas de localização de pontos anatômicos com demonstrações em modelos reais. Aprenda a palpar com precisão cirúrgica.</p>
+            </div>
+            
+            <div class="solution-card">
+                <div class="solution-icon">⚡</div>
+                <h3>Didática 100% Aplicável</h3>
+                <p>Zero enrolação. Cada aula é desenhada para você sair aplicando imediatamente. Protocolos validados, exercícios práticos e casos reais de consultório.</p>
+            </div>
+            
+            <div class="solution-card">
+                <div class="solution-icon">🏆</div>
+                <h3>Expertise de Quem Faz</h3>
+                <p>Instrutores com 15+ anos de experiência clínica. Aprenda os macetes, atalhos e segredos que só quem trabalha no dia a dia conhece.</p>
+            </div>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-number">50+</div>
+                <div class="feature-label">Horas de Conteúdo</div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-number">12</div>
+                <div class="feature-label">Módulos Completos</div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-number">30+</div>
+                <div class="feature-label">Downloadables</div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-number">∞</div>
+                <div class="feature-label">Acesso Vitalício</div>
             </div>
         </div>
     </section>
     
-    <!-- Differentiators -->
-    <section class="differentiators">
-        <div class="container">
-            <h2 class="section-title">Números que comprovam a excelência</h2>
-            <p class="section-subtitle">Investimos no que realmente importa para sua formação profissional.</p>
-            
-            <div class="diff-grid">
-                <div class="diff-card">
-                    <div class="diff-number">4K</div>
-                    <div class="diff-label">Qualidade de Vídeo</div>
-                    <div class="diff-desc">Gravações em ultra alta definição</div>
-                </div>
-                <div class="diff-card">
-                    <div class="diff-number">50+</div>
-                    <div class="diff-label">Horas de Conteúdo</div>
-                    <div class="diff-desc">Aulas teóricas e práticas</div>
-                </div>
-                <div class="diff-card">
-                    <div class="diff-number">12</div>
-                    <div class="diff-label">Módulos Completos</div>
-                    <div class="diff-desc">Do básico ao avançado</div>
-                </div>
-                <div class="diff-card">
-                    <div class="diff-number">∞</div>
-                    <div class="diff-label">Acesso Vitalício</div>
-                    <div class="diff-desc">Assista quando quiser</div>
-                </div>
-            </div>
+    <!-- Curriculum Section -->
+    <section class="curriculum" id="conteudo">
+        <div class="section-header">
+            <span class="section-tag">Conteúdo do Curso</span>
+            <h2 class="section-title">O que você vai dominar</h2>
+            <p class="section-subtitle">Programa completo do básico ao nível expert.</p>
         </div>
-    </section>
-    
-    <!-- Content Section -->
-    <section class="content">
-        <div class="container">
-            <h2 class="section-title">O que você vai aprender no curso</h2>
-            <p class="section-subtitle">Conteúdo completo e estruturado para tornar você um expert em avaliação corporal.</p>
-            
-            <div class="modules">
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">1</div>
-                        <h3>Fundamentos da Antropometria</h3>
-                    </div>
-                    <ul>
-                        <li>História e princípios científicos</li>
-                        <li>Normas técnicas e éticas</li>
-                        <li>Equipamentos e materiais</li>
+        
+        <div class="modules-timeline">
+            <div class="module-item">
+                <div class="module-number-circle">01</div>
+                <div class="module-content">
+                    <h3>Fundamentos da Antropometria</h3>
+                    <ul class="module-list">
+                        <li>História e evolução da antropometria</li>
+                        <li>Princípios científicos e normas técnicas</li>
+                        <li>Equipamentos e materiais essenciais</li>
                         <li>Preparo do avaliador e avaliado</li>
                     </ul>
                 </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">2</div>
-                        <h3>Anatomia Palpatória</h3>
-                    </div>
-                    <ul>
-                        <li>Localização de pontos ósseos</li>
-                        <li>Técnicas de palpação</li>
-                        <li>Referências anatômicas</li>
-                        <li>Prática guiada passo a passo</li>
+            </div>
+            
+            <div class="module-item">
+                <div class="module-number-circle">02</div>
+                <div class="module-content">
+                    <h3>Anatomia Palpatória Avançada</h3>
+                    <ul class="module-list">
+                        <li>Localização precisa de pontos ósseos</li>
+                        <li>Técnicas de palpação profissional</li>
+                        <li>Referências anatômicas em diferentes biotipos</li>
+                        <li>Prática guiada com modelos reais</li>
                     </ul>
                 </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">3</div>
-                        <h3>Medidas de Peso e Estatura</h3>
-                    </div>
-                    <ul>
-                        <li>Técnicas corretas de medição</li>
-                        <li>Fontes de erro e como evitar</li>
-                        <li>Equipamentos e calibração</li>
-                        <li>Registro e interpretação</li>
-                    </ul>
-                </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">4</div>
-                        <h3>Circunferências Corporais</h3>
-                    </div>
-                    <ul>
-                        <li>Protocolos internacionais</li>
-                        <li>Pontos anatômicos de referência</li>
-                        <li>Técnica de posicionamento da fita</li>
-                        <li>Interpretação dos resultados</li>
-                    </ul>
-                </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">5</div>
-                        <h3>Dobras Cutâneas</h3>
-                    </div>
-                    <ul>
+            </div>
+            
+            <div class="module-item">
+                <div class="module-number-circle">03</div>
+                <div class="module-content">
+                    <h3>Dobras Cutâneas - Protocolos Completos</h3>
+                    <ul class="module-list">
                         <li>Protocolo de 3, 7 e 9 dobras</li>
-                        <li>Técnica de pinçamento</li>
-                        <li>Localização precisa dos sites</li>
+                        <li>Técnica de pinçamento perfeita</li>
+                        <li>Sites de medição em detalhes</li>
                         <li>Cálculo do percentual de gordura</li>
                     </ul>
                 </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">6</div>
-                        <h3>Diametros Ósseos</h3>
-                    </div>
-                    <ul>
-                        <li>Medidas de diâmetro</li>
-                        <li>Cálculo de massa óssea</li>
-                        <li>Determinação do frame corporal</li>
-                        <li>Aplicações práticas</li>
+            </div>
+            
+            <div class="module-item">
+                <div class="module-number-circle">04</div>
+                <div class="module-content">
+                    <h3>Circunferências e Índices</h3>
+                    <ul class="module-list">
+                        <li>Protocolos internacionais (ISAK, NCAA)</li>
+                        <li>Pontos anatômicos de referência</li>
+                        <li>Índice cintura-quadril e conicidade</li>
+                        <li>Interpretação clínica dos resultados</li>
                     </ul>
                 </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">7</div>
-                        <h3>Bioimpedância Elétrica</h3>
-                    </div>
-                    <ul>
-                        <li>Princípios físicos</li>
-                        <li>Protocolos de medição</li>
+            </div>
+            
+            <div class="module-item">
+                <div class="module-number-circle">05</div>
+                <div class="module-content">
+                    <h3>Bioimpedância e Tecnologias</h3>
+                    <ul class="module-list">
+                        <li>Princípios físicos da bioimpedância</li>
+                        <li>Protocolos de medição corretos</li>
                         <li>Interpretação de resultados</li>
-                        <li>Limitações e cuidados</li>
+                        <li>Limitações e fontes de erro</li>
                     </ul>
                 </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">8</div>
-                        <h3>Composição Corporal</h3>
-                    </div>
-                    <ul>
+            </div>
+            
+            <div class="module-item">
+                <div class="module-number-circle">06</div>
+                <div class="module-content">
+                    <h3>Composição Corporal Avançada</h3>
+                    <ul class="module-list">
                         <li>Modelos de 2, 3 e 4 compartimentos</li>
-                        <li>Equações preditivas</li>
-                        <li>Softwares de análise</li>
-                        <li>Relatórios profissionais</li>
-                    </ul>
-                </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">9</div>
-                        <h3>Perimetria e Índices</h3>
-                    </div>
-                    <ul>
-                        <li>Índice cintura-quadril</li>
-                        <li>Índice de conicidade</li>
-                        <li>Relação cintura-estatura</li>
-                        <li>Interpretação clínica</li>
-                    </ul>
-                </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">10</div>
-                        <h3>Avaliação Postural</h3>
-                    </div>
-                    <ul>
-                        <li>Protocolos de avaliação</li>
-                        <li>Fotometria postural</li>
-                        <li>Softwares de análise</li>
-                        <li>Relatório postural</li>
-                    </ul>
-                </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">11</div>
-                        <h3>Casos Práticos</h3>
-                    </div>
-                    <ul>
-                        <li>Avaliação completa em adultos</li>
-                        <li>Avaliação em idosos</li>
-                        <li>Avaliação em atletas</li>
-                        <li>Avaliação em obesidade</li>
-                    </ul>
-                </div>
-                
-                <div class="module">
-                    <div class="module-header">
-                        <div class="module-number">12</div>
-                        <h3>Consultório na Prática</h3>
-                    </div>
-                    <ul>
-                        <li>Montagem do espaço</li>
-                        <li>Fluxo de atendimento</li>
-                        <li>Precificação</li>
-                        <li>Marketing para avaliação</li>
+                        <li>Equações preditivas e suas aplicações</li>
+                        <li>Softwares de análise profissional</li>
+                        <li>Relatórios técnicos completos</li>
                     </ul>
                 </div>
             </div>
@@ -879,153 +1528,192 @@
     </section>
     
     <!-- Target Audience -->
-    <section class="audience">
-        <div class="container">
-            <h2 class="section-title">Para quem é este curso?</h2>
-            <p class="section-subtitle">Profissionais e estudantes que querem se destacar na avaliação corporal.</p>
+    <section class="audience" id="para-quem">
+        <div class="section-header">
+            <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Para Quem é o Curso</span>
+            <h2 class="section-title">Profissionais que querem se destacar</h2>
+            <p class="section-subtitle">Se você trabalha com avaliação corporal, este curso é para você.</p>
+        </div>
+        
+        <div class="audience-grid">
+            <div class="audience-card">
+                <div class="audience-icon">🥗</div>
+                <h3>Nutricionistas</h3>
+                <p>Aprimore suas consultas com avaliações precisas e completas. Diferencie-se no mercado.</p>
+            </div>
             
-            <div class="audience-grid">
-                <div class="audience-card">
-                    <div class="audience-icon">🥗</div>
-                    <h3>Nutricionistas</h3>
-                    <p>Aprimore suas consultas com avaliações corporais precisas e completas. Diferencie-se no mercado.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">💪</div>
-                    <h3>Profissionais de Educação Física</h3>
-                    <p>Ofereça avaliações profissionais aos seus alunos. Aumente o valor do seu serviço.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">🎓</div>
-                    <h3>Estudantes</h3>
-                    <p>Comece sua carreira com o pé direito. Aprenda da forma correta desde o início.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">🏥</div>
-                    <h3>Fisioterapeutas</h3>
-                    <p>Complemente sua avaliação com medidas antropométricas precisas.</p>
-                </div>
+            <div class="audience-card">
+                <div class="audience-icon">💪</div>
+                <h3>Educadores Físicos</h3>
+                <p>Ofereça avaliações profissionais de alto nível aos seus alunos e aumente seu valor.</p>
+            </div>
+            
+            <div class="audience-card">
+                <div class="audience-icon">🎓</div>
+                <h3>Estudantes</h3>
+                <p>Comece sua carreira com o pé direito. Aprenda da forma correta desde o início.</p>
+            </div>
+            
+            <div class="audience-card">
+                <div class="audience-icon">🏥</div>
+                <h3>Fisioterapeutas</h3>
+                <p>Complemente sua avaliação com medidas antropométricas precisas e profissionais.</p>
             </div>
         </div>
     </section>
     
     <!-- Testimonials -->
     <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">O que dizem nossos alunos</h2>
-            <p class="section-subtitle">Profissionais que transformaram sua prática com nosso curso.</p>
+        <div class="section-header">
+            <span class="section-tag">Depoimentos</span>
+            <h2 class="section-title">O que nossos alunos dizem</h2>
+            <p class="section-subtitle">Profissionais que transformaram sua prática.</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Finalmente um curso onde consigo ver direito os pontos de medição! A qualidade 4K faz toda diferença. Já estou aplicando tudo na minha clínica e meus pacientes notaram a diferença."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">A</div>
+                    <div class="testimonial-info">
+                        <h4>Ana Carolina Silva</h4>
+                        <p>Nutricionista - São Paulo</p>
+                    </div>
+                </div>
+            </div>
             
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p class="testimonial-text">Finalmente um curso onde consigo ver direito os pontos de medição! A qualidade das gravações é impressionante. Já estou aplicando tudo na minha clínica.</p>
-                    <div class="testimonial-author">Ana Carolina Silva</div>
-                    <div class="testimonial-role">Nutricionista - São Paulo</div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"A didática prática faz toda a diferença. Em poucas semanas já me senti confiante para avaliar meus alunos. Melhor investimento que fiz na minha carreira como personal."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">R</div>
+                    <div class="testimonial-info">
+                        <h4>Ricardo Mendes</h4>
+                        <p>Personal Trainer - Rio de Janeiro</p>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">A didática prática faz toda a diferença. Em poucas semanas já me senti confiante para avaliar meus alunos. Melhor investimento da minha carreira.</p>
-                    <div class="testimonial-author">Ricardo Mendes</div>
-                    <div class="testimonial-role">Personal Trainer - Rio de Janeiro</div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">Já fiz outros cursos de antropometria, mas nenhum com essa qualidade. A anatomia palpatória ensinada passo a passo é um diferencial enorme.</p>
-                    <div class="testimonial-author">Mariana Costa</div>
-                    <div class="testimonial-role">Estudante de Nutrição - Belo Horizonte</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Já fiz outros cursos de antropometria, mas nenhum com essa qualidade. A anatomia palpatória ensinada passo a passo é um diferencial enorme. Recomendo para todos da área."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">M</div>
+                    <div class="testimonial-info">
+                        <h4>Mariana Costa</h4>
+                        <p>Estudante de Nutrição - Belo Horizonte</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Pricing -->
-    <section class="pricing">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Invista na sua carreira hoje</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Acesso vitalício com todas as atualizações futuras inclusas.</p>
+    <section class="pricing" id="investimento">
+        <div class="section-header">
+            <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Investimento</span>
+            <h2 class="section-title">Invista na sua carreira hoje</h2>
+            <p class="section-subtitle">Acesso vitalício com todas as atualizações futuras incluídas.</p>
+        </div>
+        
+        <div class="pricing-card">
+            <div class="pricing-badge">🎉 OFERTA DE LANÇAMENTO</div>
             
-            <div class="pricing-box">
-                <div class="price-label">Investimento Único</div>
-                <div class="price">R$ 497</div>
-                <div class="price-installment">ou 12x de R$ 49,70 no cartão</div>
-                
-                <ul class="price-features">
-                    <li>Acesso vitalício ao curso completo</li>
-                    <li>50+ horas de conteúdo em 4K</li>
-                    <li>Material complementar para download</li>
-                    <li>Certificado de conclusão</li>
-                    <li>Acesso ao grupo de alunos</li>
-                    <li>Suporte com os instrutores</li>
-                    <li>Atualizações futuras gratuitas</li>
-                    <li>Bônus: Planilhas profissionais</li>
-                </ul>
-                
-                <a href="https://pay.hotmart.com/SEU_LINK_AQUI" class="cta-button-large">Quero Garantir Minha Vaga →</a>
-                <p class="secure-badge">🔒 Pagamento 100% seguro via Hotmart</p>
+            <div class="pricing-original">De R$ 997</div>
+            
+            <div class="pricing-current"><span>R$</span>497</div>
+            
+            <div class="pricing-installment">ou 12x de R$ 49,70 no cartão</div>
+            
+            <ul class="pricing-features">
+                <li>Acesso vitalício ao curso completo</li>
+                <li>50+ horas de conteúdo em 4K</li>
+                <li>Material complementar para download</li>
+                <li>Certificado de 50 horas</li>
+                <li>Acesso ao grupo exclusivo de alunos</li>
+                <li>Suporte direto com instrutores</li>
+                <li>Atualizações futuras gratuitas</li>
+                <li>Bônus: Planilhas profissionais</li>
+            </ul>
+            
+            <a href="https://pay.hotmart.com/SEU_LINK" class="btn-giant">
+                Quero Garantir Minha Vaga Agora →
+            </a>
+            
+            <div class="pricing-guarantee">
+                <span>🛡️</span>
+                <span>Garantia de 7 dias ou seu dinheiro de volta</span>
             </div>
         </div>
     </section>
     
     <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <span class="section-tag">Dúvidas Frequentes</span>
+            <h2 class="section-title">Perguntas e Respostas</h2>
+        </div>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Por quanto tempo tenho acesso ao curso?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Acesso vitalício! Você pode assistir quantas vezes quiser, quando quiser, para sempre. Inclui todas as atualizações futuras do conteúdo sem nenhum custo adicional.
+                </div>
+            </div>
             
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">Por quanto tempo tenho acesso ao curso? →</div>
-                    <div class="faq-answer">Acesso vitalício! Você pode assistir quantas vezes quiser, quando quiser, para sempre. Inclui todas as atualizações futuras do conteúdo.</div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Preciso de equipamentos específicos?
+                    <span class="faq-icon">+</span>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">Preciso de equipamentos específicos para o curso? →</div>
-                    <div class="faq-answer">Não! O curso ensina técnicas que podem ser aplicadas com equipamentos básicos. Também indicamos fornecedores confiáveis caso queira adquirir materiais profissionais.</div>
+                <div class="faq-answer">
+                    Não! O curso ensina técnicas que podem ser aplicadas com equipamentos básicos. Também indicamos fornecedores confiáveis caso queira adquirir materiais profissionais no futuro.
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">O certificado é válido? →</div>
-                    <div class="faq-answer">Sim! Emitimos certificado de 50 horas válido em todo o território nacional, respeitando a carga horária mínima exigida por conselhos profissionais.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    O certificado é válido?
+                    <span class="faq-icon">+</span>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">E se eu não gostar do curso? →</div>
-                    <div class="faq-answer">Você tem 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</div>
+                <div class="faq-answer">
+                    Sim! Emitimos certificado de 50 horas válido em todo o território nacional, respeitando a carga horária mínima exigida por conselhos profissionais.
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">Sou estudante, posso fazer o curso? →</div>
-                    <div class="faq-answer">Com certeza! Muitos alunos começam durante a graduação para se destacarem no mercado de trabalho. O certificado vale para complementação de horas.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    E se eu não gostar do curso?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Você tem 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Footer CTA -->
-    <section class="footer-cta">
-        <div class="container">
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
             <h2>Não perca mais tempo</h2>
-            <p>Comece hoje a transformar sua prática profissional com a avaliação corporal mais completa e de alta qualidade do mercado.</p>
-            <a href="https://pay.hotmart.com/SEU_LINK_AQUI" class="cta-button" style="font-size: 1.5rem; padding: 1.5rem 4rem;">Quero Me Matricular Agora →</a>
-            <p style="margin-top: 1.5rem; color: #94a3b8;">⚡ Oferta por tempo limitado • Garantia de 7 dias</p>
+            <p>Comece hoje a transformar sua prática profissional com o método de avaliação corporal mais completo do mercado.</p>
+            
+            <a href="https://pay.hotmart.com/SEU_LINK" class="btn-white">
+                Quero Me Tornar um Expert →
+            </a>
         </div>
     </section>
     
     <!-- Footer -->
     <footer>
-        <p>© 2024 Curso de Antropometria Profissional. Todos os direitos reservados.</p>
-        <p style="margin-top: 0.5rem;">Este site não é afiliado ao Facebook, Instagram ou Google.</p>
+        <p>© 2024 Método AvaliaPro®. Todos os direitos reservados.</p>
+        <p>Este site não é afiliado ao Facebook, Instagram ou Google.</p>
     </footer>
-    
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isOpen = answer.style.display === 'block';
-                
-                // Close all
-                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-                
-                // Toggle current
-                answer.style.display = isOpen ? 'none' : 'block';
-            });
-        });
-        
-        // Initialize FAQ closed
-        document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-    </script>
 </body>
 </html>
