@@ -243,15 +243,37 @@
             margin-bottom: 1rem;
         }
         
-        .athletes-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
+        /* CARROSSEL DE ATLETAS */
+        .athletes-carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 2rem 0;
         }
         
-        .athlete-card {
+        .athletes-carousel {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+            animation: scrollCarousel 40s linear infinite;
+        }
+        
+        .athletes-carousel:hover {
+            animation-play-state: paused;
+        }
+        
+        .athletes-carousel-container:hover .athletes-carousel {
+            animation-duration: 20s;
+        }
+        
+        @keyframes scrollCarousel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .athlete-card-carousel {
+            flex-shrink: 0;
+            width: 280px;
             background: linear-gradient(145deg, rgba(26, 26, 46, 0.8) 0%, rgba(18, 18, 26, 0.9) 100%);
             border: 1px solid rgba(251, 191, 36, 0.1);
             border-radius: 20px;
@@ -259,30 +281,35 @@
             transition: all 0.4s;
         }
         
-        .athlete-card:hover {
-            transform: translateY(-10px);
+        .athlete-card-carousel:hover {
+            transform: translateY(-10px) scale(1.02);
             border-color: rgba(251, 191, 36, 0.3);
-            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.1);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.15);
         }
         
-        .athlete-card img {
+        .athlete-card-carousel img {
             width: 100%;
-            height: 280px;
+            height: 320px;
             object-fit: cover;
+            transition: transform 0.4s;
         }
         
-        .athlete-info {
-            padding: 1.5rem;
+        .athlete-card-carousel:hover img {
+            transform: scale(1.05);
         }
         
-        .athlete-name {
+        .athlete-info-carousel {
+            padding: 1.25rem;
+        }
+        
+        .athlete-name-carousel {
             font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
         }
         
-        .athlete-title {
-            font-size: 0.9rem;
+        .athlete-title-carousel {
+            font-size: 0.85rem;
             color: var(--text-muted);
         }
         
@@ -631,39 +658,175 @@
             <p style="color: var(--text-muted);">Campeões mundiais e atletas de UFC que transformaram sua performance com nossa assessoria.</p>
         </div>
         
-        <div class="athletes-grid">
-            <div class="athlete-card">
-                <img src="irmais-funegra.png" alt="Irmãs Funegra">
-                <div class="athlete-info">
-                    <div class="athlete-name">Irmãs Funegra</div>
-                    <div class="athlete-title">Múltiplas campeãs mundiais IBJJF</div>
+        <div class="athletes-carousel-container" id="athletesCarousel">
+            <div class="athletes-carousel">
+                <!-- Primeira fileira (original) -->
+                <div class="athlete-card-carousel">
+                    <img src="irmais-funegra.png" alt="Irmãs Funegra">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Irmãs Funegra</div>
+                        <div class="athlete-title-carousel">Múltiplas campeãs mundiais IBJJF</div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="athlete-card">
-                <img src="andre-garcia.png" alt="André Garcia">
-                <div class="athlete-info">
-                    <div class="athlete-name">André Garcia</div>
-                    <div class="athlete-title">Múltiplo campeão mundial</div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="andre-garcia.png" alt="André Garcia">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">André Garcia</div>
+                        <div class="athlete-title-carousel">Múltiplo campeão mundial</div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="athlete-card">
-                <img src="andrea-cavalcante.png" alt="Andréia Cavalcante">
-                <div class="athlete-info">
-                    <div class="athlete-name">Andréia Cavalcante</div>
-                    <div class="athlete-title">Nº 1 do mundo AJP</div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="andrea-cavalcante.png" alt="Andréia Cavalcante">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Andréia Cavalcante</div>
+                        <div class="athlete-title-carousel">Nº 1 do mundo AJP</div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="athlete-card">
-                <img src="christian-thier.png" alt="Christian Thier">
-                <div class="athlete-info">
-                    <div class="athlete-name">Christian Thier</div>
-                    <div class="athlete-title">Recordista Kettlebell Sport</div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="christian-thier.png" alt="Christian Thier">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Christian Thier</div>
+                        <div class="athlete-title-carousel">Recordista Kettlebell Sport</div>
+                    </div>
+                </div>
+                
+                <!-- NOVOS ATLETAS -->
+                <div class="athlete-card-carousel">
+                    <img src="atleta-ibjjf.png" alt="Campeã IBJJF">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Campeã IBJJF</div>
+                        <div class="athlete-title-carousel">Campeã mundial de Jiu-Jitsu</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="atleta-powerlifting-fem.png" alt="Atleta Powerlifting">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Atleta Powerlifting</div>
+                        <div class="athlete-title-carousel">Medalhista Copa Rio</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="atleta-powerlifting-masc.png" alt="Powerlifter">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Atleta IPF</div>
+                        <div class="athlete-title-carousel">Campeonato Mundial 2025</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="atleta-ufc.png" alt="Lutadora UFC">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Lutadora UFC</div>
+                        <div class="athlete-title-carousel">Peso-palha do UFC</div>
+                    </div>
+                </div>
+                
+                <!-- Duplicados para loop infinito -->
+                <div class="athlete-card-carousel">
+                    <img src="irmais-funegra.png" alt="Irmãs Funegra">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Irmãs Funegra</div>
+                        <div class="athlete-title-carousel">Múltiplas campeãs mundiais IBJJF</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="andre-garcia.png" alt="André Garcia">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">André Garcia</div>
+                        <div class="athlete-title-carousel">Múltiplo campeão mundial</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="andrea-cavalcante.png" alt="Andréia Cavalcante">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Andréia Cavalcante</div>
+                        <div class="athlete-title-carousel">Nº 1 do mundo AJP</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="christian-thier.png" alt="Christian Thier">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Christian Thier</div>
+                        <div class="athlete-title-carousel">Recordista Kettlebell Sport</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="atleta-ibjjf.png" alt="Campeã IBJJF">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Campeã IBJJF</div>
+                        <div class="athlete-title-carousel">Campeã mundial de Jiu-Jitsu</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="atleta-powerlifting-fem.png" alt="Atleta Powerlifting">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Atleta Powerlifting</div>
+                        <div class="athlete-title-carousel">Medalhista Copa Rio</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="atleta-powerlifting-masc.png" alt="Powerlifter">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Atleta IPF</div>
+                        <div class="athlete-title-carousel">Campeonato Mundial 2025</div>
+                    </div>
+                </div>
+                
+                <div class="athlete-card-carousel">
+                    <img src="atleta-ufc.png" alt="Lutadora UFC">
+                    <div class="athlete-info-carousel">
+                        <div class="athlete-name-carousel">Lutadora UFC</div>
+                        <div class="athlete-title-carousel">Peso-palha do UFC</div>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <script>
+            // Controle de velocidade baseado na posição do mouse
+            const carouselContainer = document.getElementById('athletesCarousel');
+            const carousel = carouselContainer.querySelector('.athletes-carousel');
+            let baseSpeed = 40; // segundos para uma volta completa
+            
+            carouselContainer.addEventListener('mousemove', (e) => {
+                const rect = carouselContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const center = rect.width / 2;
+                const distanceFromCenter = x - center;
+                
+                // Quanto mais longe do centro, mais rápido
+                const speedMultiplier = 1 + (Math.abs(distanceFromCenter) / center) * 2;
+                const newDuration = baseSpeed / speedMultiplier;
+                
+                carousel.style.animationDuration = newDuration + 's';
+                
+                // Direção baseada no lado
+                if (distanceFromCenter > 0) {
+                    // Mouse na direita - desliza para esquerda (normal)
+                    carousel.style.animationDirection = 'normal';
+                } else {
+                    // Mouse na esquerda - desliza para direita
+                    carousel.style.animationDirection = 'reverse';
+                }
+            });
+            
+            carouselContainer.addEventListener('mouseleave', () => {
+                // Volta ao normal quando sai
+                carousel.style.animationDuration = baseSpeed + 's';
+                carousel.style.animationDirection = 'normal';
+            });
+        </script>
     </section>
     
     <section class="method-section" id="metodologia">
