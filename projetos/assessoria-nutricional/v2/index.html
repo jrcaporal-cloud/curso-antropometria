@@ -54,7 +54,7 @@
                 #020204;
         }
         
-        /* Particle Canvas */
+        /* Particle Canvas - DESATIVADO NO MOBILE */
         #particles-canvas {
             position: fixed;
             top: 0;
@@ -65,13 +65,30 @@
             pointer-events: none;
         }
         
-        /* Floating Orbs */
+        @media (max-width: 768px) {
+            #particles-canvas {
+                display: none;
+            }
+        }
+        
+        /* Floating Orbs - REDUZIDOS NO MOBILE */
         .orb {
             position: fixed;
             border-radius: 50%;
             filter: blur(100px);
             z-index: -1;
             opacity: 0.5;
+        }
+        
+        @media (max-width: 768px) {
+            .orb {
+                opacity: 0.3;
+                filter: blur(60px);
+            }
+            
+            .orb-3, .orb-4 {
+                display: none;
+            }
         }
         
         .orb-1 {
@@ -1628,13 +1645,15 @@
         }
         
         const particles = [];
-        const particleCount = 80;
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        const particleCount = isMobile ? 0 : 80;
         
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
         }
         
         function animateParticles() {
+            if (isMobile) return;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
             particles.forEach(particle => {
