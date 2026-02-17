@@ -290,7 +290,44 @@
         .hero-description {
             font-size: 1.1rem;
             color: var(--text-muted);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            padding: 1.25rem 0;
+            border-top: 1px solid rgba(251, 191, 36, 0.2);
+            border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gold) 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.25rem;
+        }
+        
+        .hero-description-secondary {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
         }
 
         .hero-buttons {
@@ -749,9 +786,29 @@
             }
 
             .hero-description {
-                font-size: 0.95rem;
-                line-height: 1.7;
-                margin-bottom: 1.5rem;
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1.25rem;
+            }
+            
+            .hero-stats {
+                gap: 1rem;
+                margin: 1.25rem 0;
+                padding: 1rem 0;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .stat-label {
+                font-size: 0.65rem;
+                letter-spacing: 0.5px;
+            }
+            
+            .hero-description-secondary {
+                font-size: 0.9rem;
+                line-height: 1.6;
             }
 
             .hero-buttons {
@@ -1014,7 +1071,26 @@
                 <p class="hero-subtitle">A ciência dos campeões aplicada à sua rotina.</p>
 
                 <p class="hero-description">
-                    Minha missão é trazer a precisão da nutrição de elite para quem não tem tempo a perder. Há quase 10 anos, divido meu tempo entre a docência universitária e o preparo de atletas campeões mundiais. Mas a verdade é que 80% dos meus pacientes são pessoas comuns, com rotinas produtivas e agendas cheias. Como cofundador da <strong>Health Compass</strong>, desenvolvi uma tecnologia que remove as suposições da sua dieta. Eu uso o 'padrão ouro' dos tatames e ringues para garantir que você atinja sua melhor forma física com o máximo de eficiência e o mínimo de atrito na sua rotina.
+                    Minha missão é trazer a <strong>precisão da nutrição de elite</strong> para quem não tem tempo a perder.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">anos de experiência</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">pacientes comuns produtivos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">atletas campeões</div>
+                    </div>
+                </div>
+                
+                <p class="hero-description-secondary">
+                    Como cofundador da <strong>Health Compass</strong>, desenvolvi uma tecnologia que <strong>remove as suposições</strong> da sua dieta. Uso o <em>"padrão ouro"</em> dos tatames para sua melhor forma física — com máxima eficiência e mínimo atrito.
                 </p>
 
                 <div class="hero-buttons">
