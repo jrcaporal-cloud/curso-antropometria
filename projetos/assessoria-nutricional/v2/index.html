@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rinaldo Caporal | Assessoria Nutricional de Alta Performance</title>
-    <meta name="description" content="Assessoria nutricional de alta performance para atletas e pessoas exigentes. Metodologia baseada em biofeedback e análise de dados.">
+    <meta name="description" content="Assessoria nutricional de alta performance. +10 anos de experiência, mais de 3000 pacientes atendidos, 85% de taxa de renovação.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,8 @@
             --deep-gold: #b8860b;
             --electric-purple: #8b5cf6;
             --cyan: #06b6d4;
+            --hot-pink: #ec4899;
+            --lime: #84cc16;
             --dark: #0a0a0f;
             --darker: #050508;
             --card-bg: rgba(20, 20, 35, 0.7);
@@ -48,6 +50,7 @@
                 radial-gradient(ellipse at 0% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
                 radial-gradient(ellipse at 100% 0%, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
                 radial-gradient(ellipse at 50% 100%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(236, 72, 153, 0.05) 0%, transparent 40%),
                 var(--darker);
         }
         
@@ -72,38 +75,49 @@
         }
         
         .orb-1 {
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 600px;
             background: var(--electric-purple);
-            top: -100px;
-            right: -150px;
-            animation: float-orb 20s ease-in-out infinite;
+            top: -150px;
+            right: -200px;
+            animation: float-orb 25s ease-in-out infinite;
         }
         
         .orb-2 {
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             background: var(--neon-gold);
-            bottom: 10%;
-            left: -100px;
-            animation: float-orb 25s ease-in-out infinite reverse;
+            bottom: 5%;
+            left: -150px;
+            animation: float-orb 30s ease-in-out infinite reverse;
         }
         
         .orb-3 {
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
             background: var(--cyan);
-            top: 40%;
-            right: 10%;
-            animation: float-orb 18s ease-in-out infinite;
+            top: 35%;
+            right: 5%;
+            animation: float-orb 20s ease-in-out infinite;
             animation-delay: -5s;
+        }
+        
+        .orb-4 {
+            width: 350px;
+            height: 350px;
+            background: var(--hot-pink);
+            bottom: 30%;
+            right: 20%;
+            animation: float-orb 22s ease-in-out infinite;
+            animation-delay: -10s;
+            opacity: 0.3;
         }
         
         @keyframes float-orb {
             0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(50px, -30px) scale(1.1); }
-            50% { transform: translate(-30px, 50px) scale(0.9); }
-            75% { transform: translate(-50px, -20px) scale(1.05); }
+            25% { transform: translate(60px, -40px) scale(1.1); }
+            50% { transform: translate(-40px, 60px) scale(0.9); }
+            75% { transform: translate(-60px, -30px) scale(1.05); }
         }
         
         /* Navigation */
@@ -460,12 +474,12 @@
             margin-top: 0.25rem;
         }
         
-        /* Stats Bar */
+        /* Stats Bar - NOVO COM ANIMAÇÃO DE CONTADOR */
         .stats-bar {
             display: flex;
             justify-content: center;
             gap: 6rem;
-            padding: 4rem 5%;
+            padding: 5rem 5%;
             background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.05), transparent);
             border-top: 1px solid rgba(255, 215, 0, 0.1);
             border-bottom: 1px solid rgba(255, 215, 0, 0.1);
@@ -493,30 +507,64 @@
             text-align: center;
             position: relative;
             z-index: 1;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         
         .stat-number {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--neon-gold) 0%, #fff 50%, var(--electric-purple) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1;
-            animation: counter-pulse 2s ease-in-out infinite;
+            margin-bottom: 0.5rem;
         }
         
-        @keyframes counter-pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .stat-suffix {
+            font-size: 2rem;
+            color: var(--neon-gold);
         }
         
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-top: 0.5rem;
+        }
+        
+        .stat-highlight {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--neon-gold), var(--electric-purple));
+            color: var(--black);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
         }
         
         /* Section Styles */
@@ -1100,11 +1148,12 @@
             }
             
             .stats-bar {
+                flex-direction: column;
                 gap: 3rem;
             }
             
             .stat-number {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
             }
             
             .method-grid,
@@ -1138,6 +1187,7 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
     
     <nav class="nav" id="navbar">
         <div class="nav-logo">RINALDO CAPORAL</div>
@@ -1184,26 +1234,31 @@
                     </div>
                     
                     <div class="floating-card floating-card-2">
-                        <div class="floating-card-number">500+</div>
-                        <div class="floating-card-label">Vidas Transformadas</div>
+                        <div class="floating-card-number">3000+</div>
+                        <div class="floating-card-label">Pacientes Atendidos</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
+    <!-- STATS BAR COM NOVAS INFORMAÇÕES E ANIMAÇÃO -->
     <div class="stats-bar">
         <div class="stat-item">
-            <div class="stat-number">10</div>
+            <div class="stat-icon">⭐</div>
+            <div class="stat-number"><span class="counter" data-target="10">0</span><span class="stat-suffix">+</span></div>
             <div class="stat-label">Anos de Experiência</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">80%</div>
-            <div class="stat-label">Pacientes Comuns Produtivos</div>
+            <div class="stat-icon">👥</div>
+            <div class="stat-number"><span class="counter" data-target="3000">0</span><span class="stat-suffix">+</span></div>
+            <div class="stat-label">Pacientes Atendidos</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">∞</div>
-            <div class="stat-label">Atletas Campeões</div>
+            <div class="stat-icon">🔄</div>
+            <div class="stat-number"><span class="counter" data-target="85">0</span><span class="stat-suffix">%</span></div>
+            <div class="stat-label">Taxa de Renovação</div>
+            <span class="stat-highlight">Excelente!</span>
         </div>
     </div>
     
@@ -1549,7 +1604,8 @@
                 this.speedX = (Math.random() - 0.5) * 0.5;
                 this.speedY = (Math.random() - 0.5) * 0.5;
                 this.opacity = Math.random() * 0.5 + 0.1;
-                this.color = Math.random() > 0.5 ? '#ffd700' : '#8b5cf6';
+                const colors = ['#ffd700', '#8b5cf6', '#06b6d4', '#ec4899'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
             }
             
             update() {
@@ -1572,7 +1628,7 @@
         }
         
         const particles = [];
-        const particleCount = 50;
+        const particleCount = 80;
         
         for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
@@ -1593,11 +1649,11 @@
                     const dy = p1.y - p2.y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     
-                    if (distance < 150) {
+                    if (distance < 120) {
                         ctx.beginPath();
                         ctx.moveTo(p1.x, p1.y);
                         ctx.lineTo(p2.x, p2.y);
-                        ctx.strokeStyle = `rgba(255, 215, 0, ${0.1 * (1 - distance / 150)})`;
+                        ctx.strokeStyle = `rgba(255, 215, 0, ${0.15 * (1 - distance / 120)})`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
@@ -1608,6 +1664,42 @@
         }
         
         animateParticles();
+        
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString();
+                    }
+                };
+                
+                // Start animation when element is in view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(counter);
+            });
+        }
+        
+        animateCounters();
     </script>
 </body>
 </html>
