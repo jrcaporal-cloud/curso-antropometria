@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinaldo Caporal | Assessoria Nutricional de Alta Performance</title>
+    <meta name="description" content="Assessoria nutricional de alta performance para atletas e pessoas exigentes. Metodologia baseada em biofeedback e análise de dados. Atletas de UFC, campeões mundiais de Jiu-Jitsu e recordistas de Powerlifting.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #fbbf24;
+            --gold-dark: #d97706;
+            --dark: #0a0a0f;
+            --dark-light: #12121a;
+            --dark-card: #1a1a2e;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --success: #22c55e;
+            --accent: #6366f1;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse 80% 50% at 20% 40%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 60%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+        }
+        
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--gold);
+            top: -100px;
+            right: -100px;
+            animation: floatOrb1 20s ease-in-out infinite;
+        }
+        
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            bottom: 20%;
+            left: -100px;
+            animation: floatOrb2 25s ease-in-out infinite;
+        }
+        
+        @keyframes floatOrb1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-50px, 30px) scale(1.1); }
+        }
+        
+        @keyframes floatOrb2 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(60px, -40px); }
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #000;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(251, 191, 36, 0.15);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--gold) 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--gold);
+            background: rgba(251, 191, 36, 0.1);
+        }
+        
+        /* Athletes Section */
+        .athletes-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, var(--dark) 0%, rgba(251, 191, 36, 0.03) 50%, var(--dark) 100%);
+        }
+        
+        .athletes-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .athletes-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        
+        .athletes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .athlete-card {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8) 0%, rgba(18, 18, 26, 0.9) 100%);
+            border: 1px solid rgba(251, 191, 36, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.4s;
+        }
+        
+        .athlete-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(251, 191, 36, 0.3);
+            box-shadow: 0 20px 40px rgba(251, 191, 36, 0.1);
+        }
+        
+        .athlete-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .athlete-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .athlete-title {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        /* Methodology Section */
+        .method-section {
+            padding: 6rem 2rem;
+        }
+        
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .method-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .method-card {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9) 0%, rgba(18, 18, 26, 0.95) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(251, 191, 36, 0.2);
+        }
+        
+        .method-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .method-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        
+        .method-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, var(--dark) 0%, rgba(99, 102, 241, 0.03) 50%, var(--dark) 100%);
+        }
+        
+        .pricing-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .pricing-card {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.9) 0%, rgba(18, 18, 26, 0.95) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--gold);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'MAIS POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #000;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(251, 191, 36, 0.3);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .pricing-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            min-height: 40px;
+        }
+        
+        .pricing-price {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+        }
+        
+        .pricing-installment {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-features li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .btn-pricing {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #000;
+            padding: 0.875rem;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .btn-pricing:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(251, 191, 36, 0.2);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 6rem 2rem;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: linear-gradient(145deg, rgba(26, 26, 46, 0.8) 0%, rgba(18, 18, 26, 0.9) 100%);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .faq-question:hover {
+            color: var(--gold);
+        }
+        
+        .faq-icon {
+            color: var(--text-muted);
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: var(--gold);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem 1.25rem;
+            color: var(--text-muted);
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, var(--dark) 0%, rgba(251, 191, 36, 0.05) 100%);
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .athletes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .method-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Rinaldo Caporal</div>
+            <a href="#planos" class="nav-cta">Ver Planos →</a>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <div class="hero-badge">⭐ Nutricionista & Cofundador Health Compass</div>
+                
+                <h1>
+                    Alta Performance para a <span>Vida Real</span>
+                </h1>
+                
+                <p class="hero-subtitle">A ciência dos campeões aplicada à sua rotina.</p>
+                
+                <p class="hero-description">
+                    Sou nutricionista e professor universitário há quase 10 anos. Como cofundador da <strong>Health Compass</strong>, desenvolvi a tecnologia que utilizo para monitorar meus pacientes, unindo rigor acadêmico à precisão estatística.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#planos" class="btn-gold">Quero começar agora →</a>
+                    <a href="#metodologia" class="btn-outline">Conhecer metodologia</a>
+                </div>
+            </div>
+            
+            <div>
+                <!-- Espaço para foto profissional -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Athletes -->
+    <section class="athletes-section">
+        <div class="athletes-content">
+            <div class="athletes-title">Quem Confia no Método</div>
+            
+            <div class="athletes-grid">
+                <div class="athlete-card">
+                    <div class="athlete-icon">🥋</div>
+                    <div class="athlete-name">Irmãs Funegra</div>
+                    <div class="athlete-title">Campeãs Mundiais Jiu-Jitsu</div>
+                </div>
+                
+                <div class="athlete-card">
+                    <div class="athlete-icon">🥊</div>
+                    <div class="athlete-name">Lara Fritzen Procópio</div>
+                    <div class="athlete-title">Atleta UFC</div>
+                </div>
+                
+                <div class="athlete-card">
+                    <div class="athlete-icon">🏆</div>
+                    <div class="athlete-name">Christian Thier</div>
+                    <div class="athlete-title">Recordista Kettlebell Sport</div>
+                </div>
+                
+                <div class="athlete-card">
+                    <div class="athlete-icon">🌎</div>
+                    <div class="athlete-name">Andréia Cavalcante</div>
+                    <div class="athlete-title">Nº 1 Mundial AJP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Methodology -->
+    <section class="method-section" id="metodologia">
+        <div class="section-header">
+            <div class="section-tag">A Metodologia</div>
+            <h2 class="section-title">Onde a Tecnologia encontra a Performance</h2>
+            <p style="color: var(--text-muted);">Diferente de uma dieta comum, meu acompanhamento é baseado em Biofeedback e Análise de Dados.</p>
+        </div>
+        
+        <div class="method-grid">
+            <div class="method-card">
+                <div class="method-icon">📱</div>
+                <h3>Plataforma Health Compass</h3>
+                <p>Interface intuitiva para registro de dados, desenvolvida por mim para otimizar sua jornada.</p>
+            </div>
+            
+            <div class="method-card">
+                <div class="method-icon">📊</div>
+                <h3>Monitoramento de Biofeedback</h3>
+                <p>Análise semanal de sono, apetite, recuperação, energia, digestão e níveis de estresse.</p>
+            </div>
+            
+            <div class="method-card">
+                <div class="method-icon">💪</div>
+                <h3>Score de Treinamento</h3>
+                <p>Análise aprofundada dos seus dados de treino para garantir déficit energético ou estímulo de hipertrofia.</p>
+            </div>
+            
+            <div class="method-card">
+                <div class="method-icon">🎓</div>
+                <h3>Curadoria de Conhecimento</h3>
+                <p>Vídeos informativos selecionados para você entender os pilares da sua saúde e performance.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing-section" id="planos">
+        <div class="section-header">
+            <div class="section-tag">Ecossistema de Planos</div>
+            <h2 class="section-title">Escolha o nível de suporte ideal</h2>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-name">Protocolo Start</div>
+                <div class="pricing-desc">Foco em ajuste inicial e diagnóstico rápido.</div>
+                <div class="pricing-price">R$ 650</div>
+                <div class="pricing-installment">à vista</div>
+                <ul class="pricing-features">
+                    <li>1 consulta (60-90 min)</li>
+                    <li>1 mês de acompanhamento</li>
+                    <li>Revisão quinzenal</li>
+                    <li>Acesso à plataforma</li>
+                </ul>
+                <a href="#" class="btn-pricing">Começar →</a>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="pricing-name">Evolução 12 Semanas</div>
+                <div class="pricing-desc">O ciclo ideal para mudança de composição corporal.</div>
+                <div class="pricing-price">R$ 1.300</div>
+                <div class="pricing-installment">ou 3x R$ 466</div>
+                <ul class="pricing-features">
+                    <li>2 consultas</li>
+                    <li>3 meses de suporte</li>
+                    <li>Revisão semanal</li>
+                    <li>Acesso à plataforma</li>
+                </ul>
+                <a href="#" class="btn-pricing">Quero evoluir →</a>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-name">Performance VIP</div>
+                <div class="pricing-desc">A escolha dos campeões. Suporte contínuo.</div>
+                <div class="pricing-price">R$ 2.350</div>
+                <div class="pricing-installment">ou 6x R$ 433</div>
+                <ul class="pricing-features">
+                    <li>3 consultas</li>
+                    <li>6 meses de suporte</li>
+                    <li>3 videochamadas on-demand</li>
+                    <li>Análise avançada de treino</li>
+                    <li>Bônus de renovação R$ 500</li>
+                </ul>
+                <a href="#" class="btn-pricing">Ser VIP →</a>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-name">Método Autônomo</div>
+                <div class="pricing-desc">Praticidade máxima para quem já tem experiência.</div>
+                <div class="pricing-price">R$ 1.000</div>
+                <div class="pricing-installment">ou 3x R$ 359</div>
+                <ul class="pricing-features">
+                    <li>Sem consulta inicial</li>
+                    <li>Formulário detalhado</li>
+                    <li>3 meses de revisão semanal</li>
+                    <li>Acesso à plataforma</li>
+                </ul>
+                <a href="#" class="btn-pricing">Começar →</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="section-header">
+            <div class="section-tag">Dúvidas Frequentes</div>
+            <h2 class="section-title">Perguntas e Respostas</h2>
+        </div>
+        
+        <div class="faq-list">
+            <div class="faq-item active">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Não sou atleta, é para mim?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim. 80% dos meus pacientes são pessoas entre 30 e 50 anos que buscam qualidade de vida e melhor composição corporal.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Tenho a vida corrida, vou conseguir?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Minha metodologia é desenhada para gerar valor justamente em rotinas caóticas, otimizando seu tempo com estratégias práticas.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Como sou avaliado à distância?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Pelos relatórios semanais. Analiso fotos, peso e variações de rotina para antecipar resultados e fazer ajustes proativos (quase como um "superpoder" estatístico).
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                    Você prescreve treino?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Não prescrevo, mas analiso seus dados de treino para que a nutrição potencialize seu estímulo de ganho muscular ou perda de gordura com margem de incerteza quase zero.
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2 class="cta-title">Pronto para transformar sua performance?</h2>
+        <p class="cta-subtitle">A mesma metodologia que leva atletas ao topo do mundo pode levar você aos seus melhores resultados.</p>
+        
+        <a href="#planos" class="btn-gold">Escolher meu plano →</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">© 2024 Rinaldo Caporal. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
