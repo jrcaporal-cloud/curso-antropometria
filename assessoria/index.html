@@ -287,74 +287,14 @@
             margin-bottom: 1.5rem;
         }
 
-        /* NOVO LAYOUT HERO - SEÇÕES VISUAIS */
-        .hero-lead {
-            font-size: 1.25rem;
-            color: var(--text);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .hero-credentials {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin: 1.5rem 0;
-            padding: 1.25rem;
-            background: rgba(251, 191, 36, 0.05);
-            border-left: 3px solid var(--gold);
-            border-radius: 0 12px 12px 0;
-        }
-
-        .credential-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .credential-icon {
-            font-size: 1.2rem;
-        }
-
-        .hero-highlight-box {
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(251, 191, 36, 0.05) 100%);
-            border: 1px solid rgba(251, 191, 36, 0.2);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            text-align: center;
-        }
-
-        .highlight-stat {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--gold) 0%, #f59e0b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlight-text {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .hero-tech {
+        .hero-description {
             font-size: 1.05rem;
             color: var(--text-muted);
+            margin-bottom: 1rem;
             line-height: 1.7;
-            margin: 1.5rem 0;
         }
 
-        .hero-promise {
-            font-size: 1.1rem;
-            color: var(--text);
-            line-height: 1.7;
+        .hero-description:last-of-type {
             margin-bottom: 2rem;
         }
 
@@ -821,44 +761,14 @@
                 text-align: left;
             }
 
-            .hero-lead {
-                font-size: 1.1rem;
-                text-align: left;
-                margin-bottom: 1.25rem;
-            }
-
-            .hero-credentials {
-                margin: 1.25rem 0;
-                padding: 1rem;
-            }
-
-            .credential-item {
-                font-size: 0.9rem;
-            }
-
-            .hero-highlight-box {
-                padding: 1.25rem;
-                margin: 1.25rem 0;
-            }
-
-            .highlight-stat {
-                font-size: 2.5rem;
-            }
-
-            .highlight-text {
-                font-size: 0.9rem;
-                text-align: left;
-            }
-
-            .hero-tech {
+            .hero-description {
                 font-size: 0.95rem;
+                line-height: 1.65;
+                margin-bottom: 0.875rem;
                 text-align: left;
-                margin: 1.25rem 0;
             }
 
-            .hero-promise {
-                font-size: 1rem;
-                text-align: left;
+            .hero-description:last-of-type {
                 margin-bottom: 1.5rem;
             }
 
@@ -1123,32 +1033,24 @@
 
                 <p class="hero-subtitle">A ciência dos campeões aplicada à sua rotina.</p>
 
-                <p class="hero-lead">
+                <p class="hero-description">
                     Minha missão é trazer a <strong>precisão da nutrição de elite</strong> para quem não tem tempo a perder.
                 </p>
 
-                <div class="hero-credentials">
-                    <div class="credential-item">
-                        <span class="credential-icon">🎓</span>
-                        <span>Docência universitária</span>
-                    </div>
-                    <div class="credential-item">
-                        <span class="credential-icon">🏆</span>
-                        <span>Preparo de atletas campeões mundiais</span>
-                    </div>
-                </div>
+                <p class="hero-description">
+                    Há quase 10 anos, divido meu tempo entre a <strong>docência universitária</strong> e o <strong>preparo de atletas campeões mundiais</strong>.
+                </p>
 
-                <div class="hero-highlight-box">
-                    <div class="highlight-stat">80%</div>
-                    <p class="highlight-text">dos meus pacientes são <strong>pessoas comuns</strong>, com rotinas produtivas e agendas cheias.</p>
-                </div>
+                <p class="hero-description">
+                    Mas a verdade é que <strong>80% dos meus pacientes são pessoas comuns</strong>, com rotinas produtivas e agendas cheias.
+                </p>
 
-                <p class="hero-tech">
+                <p class="hero-description">
                     Como cofundador da <strong>Health Compass</strong>, desenvolvi uma tecnologia que <strong>remove as suposições</strong> da sua dieta.
                 </p>
 
-                <p class="hero-promise">
-                    Uso o <em>"padrão ouro"</em> dos tatames e ringues para garantir que você atinja sua <strong>melhor forma física</strong> com o <strong>máximo de eficiência</strong> e o <strong>mínimo de atrito</strong> na sua rotina.
+                <p class="hero-description">
+                    Eu uso o <em>"padrão ouro"</em> dos tatames e ringues para garantir que você atinja sua <strong>melhor forma física</strong> com o <strong>máximo de eficiência</strong> e o <strong>mínimo de atrito</strong> na sua rotina.
                 </p>
 
                 <div class="hero-buttons">
