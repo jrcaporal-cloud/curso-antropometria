@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Assessoria Nutricional para Atletas | Rinaldo Caporal - Nutricionista Esportivo</title>
     <meta name="description" content="Assessoria nutricional de alta performance para atletas de Jiu-Jitsu, UFC e powerlifting. Método comprovado por campeões mundiais. Nutricionista esportivo com 10 anos de experiência.">
     <meta name="keywords" content="nutricionista esportivo, assessoria nutricional, nutrição para atletas, nutricionista jiu jitsu, dieta para atletas, nutricionista online, nutrição de alta performance">
@@ -701,42 +701,290 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 1024px) {
+        /* ========================================
+           MOBILE OPTIMIZATIONS
+           ======================================== */
+        @media (max-width: 768px) {
+            /* Header mobile */
+            .header {
+                padding: 0.75rem 1rem;
+            }
+            
+            .logo {
+                height: 40px;
+            }
+            
+            .nav-cta {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            /* Hero mobile */
+            .hero {
+                padding: 6rem 1rem 3rem;
+                min-height: auto;
+            }
+            
             .hero-content {
                 grid-template-columns: 1fr;
+                gap: 2rem;
                 text-align: center;
             }
-
-            .hero h1 {
-                font-size: 2.5rem;
+            
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.8rem;
+                margin-bottom: 1rem;
             }
-
+            
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-description {
+                font-size: 0.95rem;
+                line-height: 1.7;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .btn-gold, .btn-outline {
+                padding: 0.9rem 1.5rem;
+                font-size: 0.95rem;
+                width: 100%;
+            }
+            
             .hero-image {
                 order: -1;
             }
-
+            
             .hero-image img {
-                max-width: 300px;
+                max-width: 220px;
                 margin: 0 auto;
                 display: block;
+                border-radius: 16px;
             }
-
-            .athletes-grid {
-                grid-template-columns: repeat(2, 1fr);
+            
+            /* Sections mobile */
+            .athletes-section,
+            .method-section,
+            .pricing-section,
+            .faq-section,
+            .cta-section {
+                padding: 3rem 1rem;
             }
-
-            .method-grid,
+            
+            .section-header {
+                margin-bottom: 2rem;
+                padding: 0 0.5rem;
+            }
+            
+            .section-tag {
+                font-size: 0.7rem;
+                letter-spacing: 1.5px;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+                line-height: 1.3;
+            }
+            
+            .section-header p {
+                font-size: 0.9rem;
+            }
+            
+            /* Athletes carousel mobile */
+            .athletes-carousel-container {
+                padding: 1rem 0;
+            }
+            
+            .athlete-card-carousel {
+                width: 240px;
+            }
+            
+            .athlete-card-carousel img {
+                height: 280px;
+            }
+            
+            .athlete-info-carousel {
+                padding: 1rem;
+            }
+            
+            .athlete-name-carousel {
+                font-size: 0.95rem;
+            }
+            
+            .athlete-title-carousel {
+                font-size: 0.8rem;
+            }
+            
+            /* Method cards mobile */
+            .method-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .method-card {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            
+            .method-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .method-card h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.6rem;
+            }
+            
+            .method-card p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            
+            /* Pricing mobile */
             .pricing-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 0.5rem;
             }
-
+            
+            .pricing-card {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            
             .pricing-card.featured {
                 transform: none;
                 order: -1;
+                border-width: 2px;
             }
-
-            .pricing-card.featured:hover {
-                transform: translateY(-10px);
+            
+            .pricing-card.featured::before {
+                font-size: 0.7rem;
+                padding: 0.3rem 1rem;
+                top: -10px;
+            }
+            
+            .pricing-name {
+                font-size: 1.1rem;
+            }
+            
+            .pricing-desc {
+                font-size: 0.85rem;
+                min-height: auto;
+                margin-bottom: 1rem;
+            }
+            
+            .pricing-installment-highlight {
+                font-size: 1.8rem;
+            }
+            
+            .pricing-installment-label {
+                font-size: 0.9rem;
+            }
+            
+            .pricing-features li {
+                padding: 0.5rem 0;
+                font-size: 0.9rem;
+            }
+            
+            .btn-pricing {
+                padding: 0.9rem;
+                font-size: 0.95rem;
+            }
+            
+            /* FAQ mobile */
+            .faq-question {
+                padding: 1rem 1.25rem;
+                font-size: 0.95rem;
+            }
+            
+            .faq-answer {
+                padding: 0 1.25rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            /* CTA mobile */
+            .cta-title {
+                font-size: 1.6rem;
+                padding: 0 1rem;
+            }
+            
+            .cta-subtitle {
+                font-size: 0.95rem;
+                padding: 0 1rem;
+            }
+            
+            /* Footer mobile */
+            footer {
+                padding: 2rem 1rem;
+            }
+            
+            .footer-logo {
+                height: 50px;
+            }
+            
+            .footer-text {
+                font-size: 0.85rem;
+            }
+            
+            /* Touch-friendly improvements */
+            .athlete-card-carousel,
+            .method-card,
+            .pricing-card,
+            .faq-question {
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            /* Reduce motion for accessibility */
+            @media (prefers-reduced-motion: reduce) {
+                .athletes-track {
+                    animation: none !important;
+                }
+                
+                .hero-image img {
+                    animation: none !important;
+                }
+            }
+        }
+        
+        /* Tablet adjustments */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+            
+            .pricing-card {
+                padding: 1.25rem;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1.05);
+            }
+            
+            .method-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -1048,7 +1296,7 @@
                 <div class="pricing-desc">Foco em ajuste inicial e diagnóstico rápido.</div>
                 <div class="pricing-installment-highlight">R$ 650</div>
                 <div class="pricing-installment-label">à vista</div>
-                
+
                 <ul class="pricing-features">
                     <li>1 consulta (60-90 min)</li>
                     <li>1 mês de acompanhamento</li>
