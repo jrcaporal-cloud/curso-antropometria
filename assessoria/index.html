@@ -927,7 +927,7 @@
             // Carrossel suave com requestAnimationFrame
             const track = document.getElementById('athletesTrack');
             const container = document.getElementById('athletesCarousel');
-            
+
             let position = 0;
             let baseSpeed = 0.5; // pixels por frame
             let currentSpeed = baseSpeed;
@@ -936,58 +936,58 @@
             let mouseX = 0;
             let containerWidth = container.offsetWidth;
             let trackWidth = track.scrollWidth / 2; // Metade porque duplicamos
-            
+
             // Easing suave para mudanças de velocidade
             function lerp(start, end, factor) {
                 return start + (end - start) * factor;
             }
-            
+
             function animate() {
                 // Interpola suavemente a velocidade
                 currentSpeed = lerp(currentSpeed, targetSpeed, 0.05);
-                
+
                 // Atualiza posição
                 position += currentSpeed;
-                
+
                 // Loop infinito suave
                 if (position >= trackWidth) {
                     position = 0;
                 } else if (position < 0) {
                     position = trackWidth;
                 }
-                
+
                 // Aplica transform com GPU acceleration
                 track.style.transform = `translateX(${-position}px) translateZ(0)`;
-                
+
                 requestAnimationFrame(animate);
             }
-            
+
             // Inicia animação
             requestAnimationFrame(animate);
-            
+
             // Controle suave com mouse
             container.addEventListener('mouseenter', () => {
                 isHovering = true;
             });
-            
+
             container.addEventListener('mouseleave', () => {
                 isHovering = false;
                 targetSpeed = baseSpeed;
             });
-            
+
             container.addEventListener('mousemove', (e) => {
                 if (!isHovering) return;
-                
+
                 const rect = container.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const center = rect.width / 2;
                 const distanceFromCenter = (x - center) / center; // -1 a 1
-                
+
                 // Velocidade baseada na posição do mouse (mais suave)
                 const maxSpeed = 3;
                 targetSpeed = baseSpeed + (distanceFromCenter * maxSpeed);
             });
-            
+
             // Pausa suave quando mouse está parado
             let mouseTimeout;
             container.addEventListener('mousemove', () => {
@@ -1046,9 +1046,9 @@
             <div class="pricing-card">
                 <div class="pricing-name">Protocolo Start</div>
                 <div class="pricing-desc">Foco em ajuste inicial e diagnóstico rápido.</div>
-                <div class="pricing-installment-highlight">6x R$ 108</div>
-                <div class="pricing-installment-label">ou R$ 650 à vista</div>
-
+                <div class="pricing-installment-highlight">R$ 650</div>
+                <div class="pricing-installment-label">à vista</div>
+                
                 <ul class="pricing-features">
                     <li>1 consulta (60-90 min)</li>
                     <li>1 mês de acompanhamento</li>
